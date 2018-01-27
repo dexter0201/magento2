@@ -1,0 +1,36 @@
+<div id="screenview" class="">
+	<div class="row">  
+	   <div class="col-lg-4"> <div class="screenview-title"><?php echo __("Design In"); ?></div>
+	     <div class="btn-group button-alignments">
+	        <button  class="btn btn-default active ptstooltip" data-option="large-screen" type="button" data-toggle="tooltip" data-placement="top" title="<?php echo __("Large Devices, Wide Screens");?>"><span class="fa fa-desktop"></span></button>
+	        <button  class="btn btn-default ptstooltip" data-option="medium-screen" type="button" data-toggle="tooltip" data-placement="top" title="<?php echo __("Medium Devices, Desktops");?>"><span class="fa fa-laptop"></span></button>
+	        <button   class="btn btn-default ptstooltip"  data-option="tablet-screen" type="button" data-toggle="tooltip" data-placement="top" title="<?php echo __("Small Devices, Tablets");?>"> <span class="fa fa-tablet"></span></button>
+	        <button  class="btn btn-default ptstooltip"  data-option="mobile-screen"  type="button" data-toggle="tooltip" data-placement="top" title="<?php echo __("Extra Small Devices, Phones");?>"><span class="fa fa-mobile"></span> </button>
+	      </div> 
+	    </div>
+	    <div class="col-lg-3">
+                  <div><?php echo __('Enable Grid');?></div>
+                  <div>
+                    <div class="btn-group button-enablegrid">
+                      <button data-toggle="tooltip" class="btn btn-default ptstooltip" onclick="jQuery('#layout-builder').addClass('grid-editor');" title="<?php echo __("Show Grid Layout");?>" type="button"><span class="fa fa-check-square"></span></button>
+                      <button data-toggle="tooltip" class="btn btn-default ptstooltip" onclick="jQuery('#layout-builder').removeClass('grid-editor');" title="<?php echo __("Disable Grid Layout");?>" type="button"><span class="fa fa-check-square-o"></span></button>
+                    </div> 
+                  </div>
+        </div>
+       
+	</div>
+</div>
+
+<hr>
+<div role="tabpanel" id="blockmodule-tab">
+ 	<div class="tab-content">
+ 		<div role="tabpanel" class="tab-pane active" id="blockmodule">
+			<div class="module-group" id="contentblockmodule">
+		 		<div class="layout-builder-wrapper">
+		 			<div id="layout-builder" class="layout-builder"></div>
+		 			<div class="hidden-block"><textarea name="params" id="layout_html" class="textarea hidden-content-layout hide" style="width: 400px; height: 200px"><?php echo $params; ?></textarea></div>
+		 		</div> 
+			</div>
+		</div>
+	</div>
+</div>

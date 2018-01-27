@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Venustheme
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Venustheme.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.venustheme.com/license-agreement.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Venustheme
+ * @package    Ves_BlockBuilder
+ * @copyright  Copyright (c) 2014 Venustheme (http://www.venustheme.com/)
+ * @license    http://www.venustheme.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+	<menu>
+		
+		<!--
+		<add id="Ves_BaseWidget::basewidget" title="Ves Base Widget" module="Ves_BaseWidget" sortOrder="10" resource="Ves_BaseWidget::base"/>-->
+
+		<!-- Links manage base widget -->
+		<add id="Ves_BaseWidget::block_head_manage" title="Base Widgets" module="Ves_BaseWidget" sortOrder="100" parent="Ves_PageBuilder::pagebuilder" resource="Ves_BaseWidget::base"/>
+
+		<add id="Ves_BaseWidget::basewidget_manage" title="Files Manager" module="Ves_BaseWidget" sortOrder="110" parent="Ves_BaseWidget::block_head_manage" action="vesbasewidget/basewidget/imagemanager" resource="Ves_BaseWidget::baseconnector"/>
+
+		<add id="Ves_BaseWidget::basewidget_configuration" title="Configuration" module="Ves_BaseWidget" sortOrder="120"
+            parent="Ves_BaseWidget::block_head_manage" action="adminhtml/system_config/edit/section/vesbasewidget" resource="Ves_BaseWidget::config_basewidget"/>
+
+
+	</menu>
+</config>
